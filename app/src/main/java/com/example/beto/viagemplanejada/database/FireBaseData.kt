@@ -21,6 +21,7 @@ class FireBaseData {
         val publicacaoDAO: PublicacaoDAO = ViagemDatabase.get(context).publicacaoDao()
         firebaseDatabase.reference.child("Publicacao").addListenerForSingleValueEvent(object : ValueEventListener {
 
+
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot != null && dataSnapshot.exists()) {
                     Log.i("snapShot","Passou aqui")
